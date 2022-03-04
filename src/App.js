@@ -1,12 +1,17 @@
 import "./App.css";
 import List from "./components/List";
+import Wallet from "./components/Wallet";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <List />
-      </header>
+      <Router>
+        <Routes>
+          <Route path="/" element={<List />} />
+          <Route path="/wallet" element={<Wallet />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
